@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Christmas Wish</title>
-  <link rel="stylesheet" href="/styles.css">
+  <title>Wish Counter</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Write Your Christmas Wish!</h1>
-    <textarea id="wishInput" placeholder="Type your wish here..."></textarea>
-    <button id="submitWish">Submit Wish</button>
-    <div id="wishDisplay" class="hidden">
-      <h2>Your Wish:</h2>
-      <p id="wishText"></p>
+
+
+
+  <header>
+    <h1>🎅 Marry Christmas  🎅</h1>
+  </header>
+  <section class="content">
+    <div class="counter">
+      <h2>Wish Count: <span id="wishCount">0</span></h2>
+      <button id="wishButton">Make a Wish!</button>
     </div>
-  </div>
-  <script src="/script.js"></script>
+    <div class="image-container">
+      <img src="/img/Gemini_Generated_Image_i185hzi185hzi185.jpg" alt="Wish Image" id="wishImage">
+    </div>
+  </section>
+  
+  <footer>
+    <p>&copy; 2024 Your Wish </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

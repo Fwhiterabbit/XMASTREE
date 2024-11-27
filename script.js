@@ -1,10 +1,11 @@
-document.getElementById('submitWish').addEventListener('click', function() {
-    const wishInput = document.getElementById('wishInput').value;
-    if (wishInput.trim() !== "") {
-      document.getElementById('wishText').textContent = wishInput;
-      document.getElementById('wishDisplay').classList.remove('hidden');
-    } else {
-      alert("Please write a wish before submitting!");
-    }
-  });
-  
+let wishCount = 0;
+
+// Get the button and the counter text element
+const wishButton = document.getElementById('wishButton');
+const wishCountDisplay = document.getElementById('wishCount');
+
+// Event listener for the button
+wishButton.addEventListener('click', () => {
+  wishCount++;
+  wishCountDisplay.textContent = wishCount;
+});

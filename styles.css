@@ -1,45 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #ff9999, #ffcccc);
-    color: #333;
-    text-align: center;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
-  .container {
-    margin-top: 50px;
+  body {
+    font-family: "Imperial Script", cursive;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ddcdcd;
+    text-align: center;
+
   }
   
-  textarea {
-    width: 80%;
-    height: 100px;
-    margin: 10px 0;
-    padding: 10px;
-    border: 2px solid #ff6666;
-    border-radius: 5px;
-    font-size: 16px;
+  header {
+    background-color: red;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 5.5rem;
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 55px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .counter p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
   }
   
   button {
     padding: 10px 20px;
-    background-color: #ff6666;
+    font-size: 1.2rem;
+    background-color: #ff4d4d;  /* Christmas Red */
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: 2px solid #d30000;  /* Red border */
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  
+  /* Christmas button animations */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+  }
+  
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+    }
+    50% {
+      box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00;
+    }
+    100% {
+      box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+    }
   }
   
   button:hover {
-    background-color: #ff4d4d;
+    background-color: #ff1a1a;
+    animation: bounce 0.3s ease, glow 1.5s infinite; /* Bounce and glow effect on hover */
   }
   
-  #wishDisplay {
-    margin-top: 20px;
+  button:active {
+    transform: scale(0.98); /* Button shrinks slightly when clicked */
   }
   
-  .hidden {
-    display: none;
+  
+  .image-container {
+    margin-top: 30px;
+    width: 300px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background-color: red;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   
